@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Luke Collins Sound Healing</title>
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .thank-you-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .thank-you-content {
+            max-width: 600px;
+        }
+        .thank-you-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        .thank-you-content h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold, #c4a35a);
+        }
+        .thank-you-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary, rgba(245,240,235,0.8));
+            line-height: 1.8;
+        }
+        .thank-you-details {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .thank-you-details h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            margin-bottom: 1rem;
+            color: var(--color-gold, #c4a35a);
+        }
+        .thank-you-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .thank-you-details li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .thank-you-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-gold, #c4a35a);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="stars-canvas" style="display:none"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-gong-square.jpg" alt="Luke Collins Sound Healing" class="logo-img">
+                <span class="logo-text">Luke Collins</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">🎵</div>
+            <h1>Thank You for Your Booking!</h1>
+            <p>Your payment has been received and your spot is confirmed. You'll receive a confirmation email shortly with all the details.</p>
+            
+            <div class="thank-you-details">
+                <h3>What's Next?</h3>
+                <ul>
+                    <li>Check your email for confirmation</li>
+                    <li>Location details will be sent 24 hours before</li>
+                    <li>Wear comfortable clothing</li>
+                    <li>Arrive 10 minutes early to settle in</li>
+                </ul>
+            </div>
+            
+            <p>If you have any questions, feel free to reach out.</p>
+            
+            <a href="index.html" class="btn btn-primary">Return Home</a>
+            <a href="contact.html" class="btn btn-outline">Contact Luke</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luke Collins Sound Healing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Luke Collins Sound Healing</title>
+    <meta name="description" content="Sound healing services in Sydney - group sessions, private healing, and special events. Himalayan gongs and singing bowls.">
+    
+    <!-- Service Schema for AI/GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Sound Healing Services",
+        "description": "Sound healing services offered by Luke Collins in Sydney",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Service",
+                    "name": "Group Sound Bath Sessions",
+                    "description": "60-minute immersive group sound healing experience with Himalayan gongs and singing bowls. Small groups of 10-12 people. Yoga mats and blankets provided.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Luke Collins Sound Healing",
+                        "address": "Sydney, NSW"
+                    },
+                    "areaServed": "Sydney, Australia",
+                    "offers": [
+                        {
+                            "@type": "Offer",
+                            "name": "Single Ticket",
+                            "price": "50.00",
+                            "priceCurrency": "AUD"
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Couples Ticket",
+                            "price": "80.00",
+                            "priceCurrency": "AUD",
+                            "eligibleQuantity": {
+                                "@type": "QuantitativeValue",
+                                "value": 2
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Service",
+                    "name": "Private Sound Healing Sessions",
+                    "description": "60-minute personalised one-on-one sound healing experience tailored to your specific needs. Deeper, more focused healing work with individual attention.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Luke Collins Sound Healing",
+                        "address": "Sydney, NSW"
+                    },
+                    "areaServed": "Sydney, Australia",
+                    "offers": {
+                        "@type": "Offer",
+                        "name": "Private Session",
+                        "price": "150.00",
+                        "priceCurrency": "AUD"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Service",
+                    "name": "Corporate Sound Healing Events",
+                    "description": "Bring sound healing to your workplace. Group sessions for team wellbeing, stress reduction, and corporate wellness programs.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Luke Collins Sound Healing"
+                    },
+                    "areaServed": "Sydney, Australia",
+                    "offers": {
+                        "@type": "Offer",
+                        "name": "Corporate Booking",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "priceCurrency": "AUD",
+                            "description": "Custom pricing based on group size and requirements"
+                        }
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Service",
+                    "name": "Special Event Sound Ceremonies",
+                    "description": "Full moon ceremonies, seasonal celebrations, and special occasion sound journeys. Unique experiences aligned with natural cycles.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Luke Collins Sound Healing",
+                        "address": "Sydney, NSW"
+                    },
+                    "areaServed": "Sydney, Australia"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQPage Schema for Services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between group and private sound healing sessions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Group sessions ($50) are shared experiences with 10-12 people, great for beginners and community connection. Private sessions ($120) offer one-on-one attention, personalised to your specific needs and deeper healing work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long is a sound healing session?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Group sound bath sessions are typically 60 minutes. Private sessions are also 60 minutes but can be extended by arrangement. Special events may vary from 60-90 minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What instruments are used in the sessions?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sessions feature authentic Himalayan gongs, hand-hammered bronze singing bowls, crystal bowls, chimes, and other traditional instruments sourced directly from the Himalayas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I book sound healing for a corporate event?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, corporate sound healing sessions are available for workplace wellness programs, team building, and special events. Contact Luke directly for custom quotes based on group size and requirements."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="stars-canvas" style="display:none"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-gong-square.jpg" alt="Luke Collins Sound Healing" class="logo-img">
+                <span class="logo-text">Luke Collins</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tickets.html" class="btn-nav">Get Tickets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <p class="page-brand">Luke Collins</p>
+            <h1>Services</h1>
+            <p class="page-subtitle">Group sessions, private bookings, and corporate wellness</p>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section class="section">
+        <div class="container">
+            <div class="services-detail-grid">
+                
+                <!-- Group Sessions -->
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <div class="service-icon-large"></div>
+                        <div class="service-title">
+                            <h2>Group Sessions</h2>
+                            <div class="service-price-tag">From $50</div>
+                        </div>
+                    </div>
+                    <div class="service-body">
+                        <p>Join a collective sound journey. Lie back on a yoga mat as waves of sound wash over you, creating a shared experience of deep relaxation and healing.</p>
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>60-minute immersive sound experience</li>
+                            <li>Himalayan gongs and singing bowls</li>
+                            <li>Guided relaxation to begin</li>
+                            <li>Small groups (max 10-12 people)</li>
+                            <li>Yoga mats and blankets provided</li>
+                        </ul>
+                        <h4>Pricing</h4>
+                        <div class="pricing-options">
+                            <div class="pricing-row">
+                                <span>Single ticket</span>
+                                <span class="price">$50</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span>Bring a partner (2 tickets)</span>
+                                <span class="price">$80</span>
+                            </div>
+                        </div>
+                        <a href="tickets.html" class="btn btn-primary">Get Tickets</a>
+                    </div>
+                </div>
+
+                <!-- Private Sessions -->
+                <div class="service-detail-card featured">
+                    <div class="service-header">
+                        <div class="service-icon-large"></div>
+                        <div class="service-title">
+                            <h2>Private Sessions</h2>
+                            <div class="service-price-tag">From $150</div>
+                        </div>
+                    </div>
+                    <div class="service-body">
+                        <p>A personalised sound healing experience tailored to your specific needs. One-on-one sessions allow for focused, targeted work.</p>
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>60 min ($150) or 90 min ($200)</li>
+                            <li>Initial consultation to understand your needs</li>
+                            <li>Customised instrument selection</li>
+                            <li>Targeted energy work</li>
+                            <li>Post-session integration guidance</li>
+                        </ul>
+                        <h4>Ideal For</h4>
+                        <ul>
+                            <li>Stress and anxiety relief</li>
+                            <li>Processing grief or life transitions</li>
+                            <li>Deepening meditation practice</li>
+                            <li>Physical tension release</li>
+                            <li>First-time sound healing explorers</li>
+                        </ul>
+                        <a href="book.html" class="btn btn-primary">Book Private Session</a>
+                    </div>
+                </div>
+
+                <!-- Special Events -->
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <div class="service-icon-large"></div>
+                        <div class="service-title">
+                            <h2>Special Events</h2>
+                            <div class="service-price-tag">Varies</div>
+                        </div>
+                    </div>
+                    <div class="service-body">
+                        <p>Mark life's transitions and celestial moments with sound. Full moon ceremonies, seasonal celebrations, and private gatherings.</p>
+                        <h4>Upcoming Events Include</h4>
+                        <ul>
+                            <li>Full Moon Sound Baths</li>
+                            <li>Equinox Ceremonies</li>
+                            <li>Seasonal Celebrations</li>
+                        </ul>
+                        <h4>Private Events</h4>
+                        <p>Sound healing for your special occasion — birthdays, retreats, private groups.</p>
+                        <a href="events.html" class="btn btn-secondary">View Events</a>
+                        <a href="contact.html" class="btn btn-outline">Enquire About Private Events</a>
+                    </div>
+                </div>
+
+                <!-- Corporate Wellness -->
+                <div class="service-detail-card">
+                    <div class="service-header">
+                        <div class="service-icon-large"></div>
+                        <div class="service-title">
+                            <h2>Corporate Wellness</h2>
+                            <div class="service-price-tag">From $500</div>
+                        </div>
+                    </div>
+                    <div class="service-body">
+                        <p>Bring sound healing to your workplace. A powerful way to reduce stress, improve focus, and support employee wellbeing.</p>
+                        <h4>What's Included</h4>
+                        <ul>
+                            <li>45-60 minute guided sound session</li>
+                            <li>All equipment provided</li>
+                            <li>Flexible scheduling (lunch, after work, team days)</li>
+                            <li>Suitable for conference rooms or open spaces</li>
+                            <li>Groups of 5-50+ people</li>
+                        </ul>
+                        <h4>Ideal For</h4>
+                        <ul>
+                            <li>Team building and morale</li>
+                            <li>Stress management programs</li>
+                            <li>Wellness weeks and R U OK? Day</li>
+                            <li>End of quarter / project celebrations</li>
+                            <li>Executive retreats</li>
+                        </ul>
+                        <h4>Pricing</h4>
+                        <div class="pricing-options">
+                            <div class="pricing-row">
+                                <span>Small group (up to 15)</span>
+                                <span class="price">$500</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span>Medium group (15-30)</span>
+                                <span class="price">$750</span>
+                            </div>
+                            <div class="pricing-row">
+                                <span>Large group (30+)</span>
+                                <span class="price">From $1,000</span>
+                            </div>
+                        </div>
+                        <a href="contact.html?subject=Corporate%20Wellness%20Enquiry" class="btn btn-primary">Request a Quote</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Bring -->
+    <section class="section what-to-bring">
+        <div class="container">
+            <h2 class="section-title">What to Bring</h2>
+            <div class="bring-grid">
+                <div class="bring-item">
+                    <span class="bring-icon"></span>
+                    <p>Comfortable, loose clothing</p>
+                </div>
+                <div class="bring-item">
+                    <span class="bring-icon"></span>
+                    <p>Water bottle</p>
+                </div>
+                <div class="bring-item">
+                    <span class="bring-icon"></span>
+                    <p>Warm socks</p>
+                </div>
+                <div class="bring-item">
+                    <span class="bring-icon"></span>
+                    <p>Open mind & heart</p>
+                </div>
+            </div>
+            <p class="bring-note">Yoga mats, blankets, and pillows are provided. Arrive 10 minutes early to settle in.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-gong-square.jpg" alt="Luke Collins" class="footer-logo">
+                    <p>Sound Healing Sydney</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                        <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Luke Collins</p>
+                    <p>Sydney, NSW</p>
+                    <p><a href="mailto:luke@soundhealing.sydney">luke@soundhealing.sydney</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luke Collins Sound Healing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

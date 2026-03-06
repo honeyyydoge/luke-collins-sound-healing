@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "events"
+    label: "Events"
+    description: "Sound bath events and ceremonies"
+    files:
+      - name: "events_list"
+        label: "All Events"
+        file: "content/events.json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Time", name: "time", widget: "string", default: "7:00 PM - 8:00 PM" }
+              - { label: "Location", name: "location", widget: "string", default: "Primary Location, Balmain" }
+              - { label: "Price", name: "price", widget: "string", default: "$50 single / $80 pair" }
+              - { label: "Spots Available", name: "spots", widget: "string", default: "Limited to 10 participants" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Active", name: "active", widget: "boolean", default: true }
+              - { label: "Sold Out", name: "soldOut", widget: "boolean", default: false, required: false }
+              - { label: "Tickets URL", name: "ticketsUrl", widget: "string", required: false, hint: "Optional: External ticket link (overrides checkout)" }
+              - { label: "Checkout Price", name: "checkoutPrice", widget: "number", required: false, hint: "Price in AUD for Stripe checkout (e.g. 50). Leave empty if using Tickets URL." }
+
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    description: "Blog articles about sound healing"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string", default: "Luke Collins Sound Healing" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Location", name: "location", widget: "string" }

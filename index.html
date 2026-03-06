@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Collins Sound Healing | Gong & Bowl Journeys Sydney</title>
+    <meta name="description" content="Sound healing sessions in Sydney with Luke Collins. Corporate wellness programs, group and private sessions using Himalayan gongs and singing bowls for stress reduction and workplace wellbeing.">
+    
+    <!-- LocalBusiness Schema for AI/GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://lukecollins.com.au",
+        "name": "Luke Collins Sound Healing",
+        "description": "Sound healing practitioner offering corporate wellness programs, gong baths, singing bowl sessions, and workplace wellbeing experiences in Sydney.",
+        "url": "https://lukecollins.com.au",
+        "telephone": "",
+        "email": "luke@soundhealing.sydney",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Sydney",
+            "addressRegion": "NSW",
+            "postalCode": "",
+            "addressCountry": "AU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -33.8568,
+            "longitude": 151.1782
+        },
+        "priceRange": "$50-$200",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "21:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/lukecollins.soundhealing"
+        ],
+        "image": "assets/luke-portrait-full.jpg",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Sound Healing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Group Sound Bath",
+                        "description": "60-minute group sound healing session with Himalayan gongs and singing bowls"
+                    },
+                    "price": "50.00",
+                    "priceCurrency": "AUD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Private Sound Healing Session",
+                        "description": "60-minute one-on-one personalised sound healing experience"
+                    },
+                    "price": "150.00",
+                    "priceCurrency": "AUD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Corporate Wellness Program",
+                        "description": "Workplace sound healing sessions for employee wellbeing, stress reduction and team wellness"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- FAQPage Schema for AI/GEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is sound healing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sound healing is a therapeutic practice using instruments like Himalayan singing bowls and gongs to create vibrations that promote relaxation, reduce stress, and support physical and emotional wellbeing. You lie down and receive the healing sound waves."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does sound healing cost in Sydney?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "At Luke Collins Sound Healing in Sydney, group sound bath sessions start at $50 per person ($80 for couples). Private one-on-one sessions are $150 for 60 minutes or $200 for 90 minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where can I experience sound healing in Sydney Sydney?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Luke Collins offers sound healing sessions at Sydney, NSW. Both group sessions and private bookings are available in his garden sanctuary."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the benefits of sound healing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sound healing benefits include deep relaxation, stress reduction, improved sleep, reduced anxiety, pain relief, enhanced meditation, and emotional release. The vibrations help shift brainwaves into meditative states."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need experience for a sound bath?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No experience is needed. Sound baths are suitable for complete beginners. You simply lie down, close your eyes, and receive the sound. The practitioner guides you through the experience."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer corporate wellness programs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Luke Collins Sound Healing offers corporate wellness programs including workplace sound baths, team wellness days, and lunchtime stress relief sessions for businesses across Sydney. Contact us for tailored packages."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="stars-canvas" style="display:none"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-gong-square.jpg" alt="Luke Collins Sound Healing" class="logo-img">
+                <span class="logo-text">Luke Collins</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tickets.html" class="btn-nav">Get Tickets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-home">
+        <div class="hero-banner">
+            <div class="banner-slideshow">
+                <!-- Slide 1 -->
+                <div class="banner-slide active">
+                    <img src="assets/banner-3.jpg" alt="Luke Collins Sound Healing Session">
+                </div>
+                <!-- Slide 2 -->
+                <div class="banner-slide">
+                    <img src="assets/banner-2.jpg" alt="Luke Collins with Gongs and Singing Bowls in Studio">
+                </div>
+                <!-- Slide 3 -->
+                <div class="banner-slide">
+                    <img src="assets/banner-1.jpg" alt="Himalayan Gongs and Singing Bowls under the Milky Way">
+                </div>
+            </div>
+            <!-- Slideshow navigation -->
+            <button class="banner-arrow banner-prev" aria-label="Previous slide">❮</button>
+            <button class="banner-arrow banner-next" aria-label="Next slide">❯</button>
+            <div class="banner-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Luke Collins</span>
+                <span class="title-line">Sound Healing</span>
+            </h1>
+            <p class="hero-subtitle">Sound Healing Sessions in Sydney</p>
+            <div class="hero-buttons">
+                <a href="tickets.html" class="btn btn-primary">Get Tickets</a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-gallery-wrapper">
+            <div class="hero-gallery-swipe" id="heroGallery">
+                <img src="assets/luke-gong-garden.jpg" alt="Luke with gongs in garden">
+                <img src="assets/luke-gong-touch.jpg" alt="Luke touching gong">
+                <img src="assets/luke-bowls-garden.jpg" alt="Luke with singing bowls">
+                <img src="assets/luke-gong-standing.jpg" alt="Luke standing with gong">
+                <img src="assets/luke-session-1.jpg" alt="Sound healing session">
+                <img src="assets/luke-headshot.jpg" alt="Luke Collins">
+                <img src="assets/luke-session-2.jpg" alt="Sound bath session">
+                <img src="assets/garden-gong-view.jpg" alt="Garden gong setup">
+                <img src="assets/luke-gong-garden.jpg" alt="Luke with gongs in garden">
+                <img src="assets/luke-gong-touch.jpg" alt="Luke touching gong">
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function() {
+                const gallery = document.getElementById('heroGallery');
+                if (gallery && gallery.children.length > 0) {
+                    const img = gallery.children[3];
+                    const imgCenter = img.offsetLeft + (img.offsetWidth / 2);
+                    const wrapperWidth = gallery.parentElement.clientWidth;
+                    gallery.scrollLeft = imgCenter - (wrapperWidth / 2);
+                    
+                    gallery.addEventListener('scroll', function() {
+                        const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+                        if (gallery.scrollLeft >= maxScroll - 10) {
+                            gallery.scrollLeft = 0;
+                        }
+                    });
+                }
+            });
+        </script>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/luke-portrait-full.jpg" alt="Luke Collins - Sound Healing Practitioner">
+                </div>
+                <div class="about-text">
+                    <p class="lead">Welcome to a sacred space of sound and vibration.</p>
+                    <p>I'm Luke Collins, a sound healing practitioner based in Sydney. I offer group sessions and private bookings using Himalayan gongs and singing bowls to support stress reduction, relaxation, and overall wellbeing.</p>
+                    <p>Each session is a unique experience, weaving together the powerful vibrations of bronze gongs and hand-hammered bowls to create a soundscape that washes away tension and invites profound stillness.</p>
+                    <a href="about.html" class="btn btn-outline">Learn More About Luke</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="section home-intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-card intro-card-featured" onclick="location.href='corporate-wellness.html'">
+                    <div class="intro-icon"></div>
+                    <h3>Corporate Wellness</h3>
+                    <p>Workplace sound healing for teams</p>
+                </div>
+                <div class="intro-card" onclick="location.href='services.html'">
+                    <div class="intro-icon"></div>
+                    <h3>Group Sessions</h3>
+                    <p>Group sessions from $50 per person</p>
+                </div>
+                <div class="intro-card" onclick="location.href='book.html'">
+                    <div class="intro-icon"></div>
+                    <h3>Private Sessions</h3>
+                    <p>One-on-one healing tailored to you</p>
+                </div>
+                <div class="intro-card" onclick="location.href='events.html'">
+                    <div class="intro-icon"></div>
+                    <h3>Special Events</h3>
+                    <p>Full moon & seasonal ceremonies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Event Preview (Dynamic) -->
+    <section class="section home-event" id="next-event-section">
+        <div class="container">
+            <h2 class="section-title">Next Event</h2>
+            <div class="event-preview" id="next-event-preview">
+                <!-- Loaded dynamically from events.json -->
+                <p style="color: rgba(255,255,255,0.6); text-align: center;">Loading next event...</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+    // Load next event dynamically
+    (async function() {
+        try {
+            const response = await fetch('content/events.json');
+            const data = await response.json();
+            const events = data.events || data;
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            // Find next upcoming active event
+            const upcoming = events
+                .filter(e => e.active && new Date(e.date) >= today)
+                .sort((a, b) => new Date(a.date) - new Date(b.date));
+            
+            const container = document.getElementById('next-event-preview');
+            const section = document.getElementById('next-event-section');
+            
+            if (upcoming.length === 0) {
+                // No upcoming events - hide section or show message
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">No upcoming events scheduled</p>
+                        <a href="https://www.instagram.com/lukecollins.soundhealing" target="_blank" class="btn btn-outline">Follow for announcements</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            const event = upcoming[0];
+            const eventDate = new Date(event.date);
+            const day = eventDate.getDate();
+            const month = eventDate.toLocaleString('en-AU', { month: 'short' });
+            const timeStart = event.time.split(' - ')[0];
+            
+            container.innerHTML = `
+                <div class="event-date-large">
+                    <span class="day">${day}</span>
+                    <span class="month">${month}</span>
+                </div>
+                <div class="event-info">
+                    <h3>${event.title}</h3>
+                    <p>${event.description}</p>
+                    <div class="event-meta">
+                        <span>${timeStart}</span>
+                        <span>${event.location}</span>
+                    </div>
+                </div>
+                ${event.soldOut 
+                    ? '<button class="btn btn-secondary" disabled>Sold Out</button>'
+                    : event.ticketsUrl 
+                        ? `<a href="${event.ticketsUrl}" class="btn btn-primary" target="_blank">Get Tickets</a>`
+                        : '<a href="tickets.html" class="btn btn-primary">Get Tickets</a>'
+                }
+            `;
+        } catch (e) {
+            console.error('Error loading next event:', e);
+            document.getElementById('next-event-preview').innerHTML = `
+                <div style="text-align: center;">
+                    <a href="events.html" class="btn btn-outline">View All Events</a>
+                </div>
+            `;
+        }
+    })();
+    </script>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is sound healing?</h3>
+                    <p>Sound healing uses instruments like Himalayan singing bowls and gongs to create vibrations that promote relaxation, reduce stress, and support wellbeing. You lie down and receive the healing sound waves.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much does a sound bath cost?</h3>
+                    <p>Group sessions start at $50 per person ($80 for couples). Private sessions are $150 for 60 min or $200 for 90 min.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need any experience?</h3>
+                    <p>No experience needed. Sound baths are perfect for beginners. You simply lie down, close your eyes, and receive the sound.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are the benefits?</h3>
+                    <p>Benefits include deep relaxation, stress reduction, improved sleep, reduced anxiety, pain relief, and emotional release.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer corporate wellness?</h3>
+                    <p>Yes. We bring sound healing to workplaces across Sydney for team wellness days, lunch sessions, and corporate events. Contact us for packages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-gong-square.jpg" alt="Luke Collins" class="footer-logo">
+                    <p>Sound Healing Sydney</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Luke Collins</p>
+                    <p>Sydney, NSW</p>
+                    <p><a href="mailto:luke@soundhealing.sydney">luke@soundhealing.sydney</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luke Collins Sound Healing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <!-- Netlify Identity Widget (for CMS login) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>

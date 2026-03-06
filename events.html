@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Luke Collins Sound Healing</title>
+    <meta name="description" content="Upcoming sound healing events in Sydney - full moon ceremonies, seasonal celebrations, and group sound journeys.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .events-section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+        }
+        .events-section-header h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary, #F5F0EB);
+            margin-bottom: 0.5rem;
+        }
+        .past-events-section .events-section-header h2 {
+            font-style: italic;
+        }
+        .events-section-header p {
+            color: var(--text-secondary, rgba(245,240,235,0.7));
+            font-size: 1rem;
+        }
+        .past-events-section {
+            opacity: 0.75;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+            padding-top: 2rem;
+        }
+        .past-events-section .event-full-card {
+            filter: grayscale(30%);
+        }
+        .past-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.7);
+            color: rgba(255,255,255,0.8);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .event-full-card {
+            position: relative;
+        }
+        .no-events {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary, rgba(245,240,235,0.7));
+            font-style: italic;
+        }
+        .event-status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 0.5rem;
+        }
+        .event-status-badge.upcoming {
+            background: rgba(76, 175, 80, 0.2);
+            color: #81c784;
+        }
+        .event-status-badge.today {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffd54f;
+        }
+        .event-status-badge.sold-out {
+            background: rgba(244, 67, 54, 0.2);
+            color: #e57373;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="stars-canvas" style="display:none"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-gong-square.jpg" alt="Luke Collins Sound Healing" class="logo-img">
+                <span class="logo-text">Luke Collins</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tickets.html" class="btn-nav">Get Tickets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <p class="page-brand">Luke Collins</p>
+            <h1>Events</h1>
+            <p class="page-subtitle">Sound journeys and special ceremonies</p>
+        </div>
+    </header>
+
+    <!-- Upcoming Events -->
+    <section class="section">
+        <div class="container">
+            <div class="events-section-header">
+                <h2> Upcoming Events</h2>
+                <p>Join us for transformative sound experiences</p>
+            </div>
+            <div class="events-page-list" id="upcoming-events">
+                <!-- Dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="section past-events-section" id="past-events-section" style="display: none;">
+        <div class="container">
+            <div class="events-section-header">
+                <h2>Past Events</h2>
+                <p>Previous sound journeys and ceremonies</p>
+            </div>
+            <div class="events-page-list" id="past-events">
+                <!-- Dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stay Updated -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Stay Updated</h2>
+                <p>Follow on Instagram for event announcements and sound healing inspiration.</p>
+                <a href="https://www.instagram.com/lukecollins.soundhealing" target="_blank" class="btn btn-outline">@lukecollins.soundhealing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-gong-square.jpg" alt="Luke Collins" class="footer-logo">
+                    <p>Sound Healing Sydney</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Luke Collins</p>
+                    <p>Sydney, NSW</p>
+                    <p><a href="mailto:luke@lukecollins.com.au">luke@lukecollins.com.au</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luke Collins Sound Healing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Stripe Checkout
+        const stripe = Stripe('pk_live_51T3CwDCY5ofx3lJU1kEINgU8Vpa9dx2Anyrf9m5v2nMCHPcPumMe9N6s1B8hJXsNXCJY6eKVFtDirBOCl5dgCfHo00qt5gOcDq');
+        
+        async function buyTicket(eventTitle, price) {
+            try {
+                const response = await fetch('/api/create-checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        eventTitle: eventTitle,
+                        price: price,
+                        quantity: 1,
+                        successUrl: window.location.origin + '/thank-you.html',
+                        cancelUrl: window.location.href
+                    })
+                });
+                
+                const { url, error } = await response.json();
+                
+                if (error) {
+                    alert('Error: ' + error);
+                    return;
+                }
+                
+                // Redirect to Stripe Checkout
+                window.location.href = url;
+            } catch (err) {
+                console.error('Checkout error:', err);
+                alert('Unable to process checkout. Please try again.');
+            }
+        }
+        
+        // Load and render events dynamically
+        async function loadEvents() {
+            try {
+                const response = await fetch('content/events.json');
+                const data = await response.json();
+                const events = data.events || data;
+                
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                const upcoming = [];
+                const past = [];
+                
+                events.forEach(event => {
+                    if (!event.active) return;
+                    
+                    const eventDate = new Date(event.date);
+                    eventDate.setHours(0, 0, 0, 0);
+                    
+                    if (eventDate >= today) {
+                        upcoming.push(event);
+                    } else {
+                        past.push(event);
+                    }
+                });
+                
+                // Sort upcoming by date (soonest first)
+                upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
+                
+                // Sort past by date (most recent first)
+                past.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                // Render upcoming events
+                const upcomingContainer = document.getElementById('upcoming-events');
+                if (upcoming.length === 0) {
+                    upcomingContainer.innerHTML = '<p class="no-events">No upcoming events scheduled. Follow us on Instagram for announcements!</p>';
+                } else {
+                    upcomingContainer.innerHTML = upcoming.map(event => renderEventCard(event, false)).join('');
+                }
+                
+                // Render past events
+                if (past.length > 0) {
+                    document.getElementById('past-events-section').style.display = 'block';
+                    document.getElementById('past-events').innerHTML = past.map(event => renderEventCard(event, true)).join('');
+                }
+                
+            } catch (error) {
+                console.error('Error loading events:', error);
+                document.getElementById('upcoming-events').innerHTML = '<p class="no-events">Unable to load events. Please try again later.</p>';
+            }
+        }
+        
+        function renderEventCard(event, isPast) {
+            const eventDate = new Date(event.date);
+            const day = eventDate.getDate();
+            const month = eventDate.toLocaleString('en-AU', { month: 'short' });
+            const year = eventDate.getFullYear();
+            
+            // Check if event is today
+            const today = new Date();
+            const isToday = eventDate.toDateString() === today.toDateString();
+            
+            // Default image if none provided
+            const imageSrc = event.image || 'assets/luke-session-2.jpg';
+            
+            // Button state
+            let buttonHtml = '';
+            if (isPast) {
+                buttonHtml = '<button class="btn btn-secondary" disabled>Event Ended</button>';
+            } else if (event.soldOut) {
+                buttonHtml = '<button class="btn btn-secondary" disabled>Sold Out</button>';
+            } else if (event.ticketsUrl) {
+                buttonHtml = `<a href="${event.ticketsUrl}" class="btn btn-primary" target="_blank">Get Tickets</a>`;
+            } else if (event.checkoutPrice) {
+                const escapedTitle = event.title.replace(/'/g, "\\'");
+                buttonHtml = `<button class="btn btn-primary" onclick="buyTicket('${escapedTitle}', ${event.checkoutPrice})">Buy Ticket - $${event.checkoutPrice}</button>`;
+            } else {
+                buttonHtml = '<a href="tickets.html" class="btn btn-primary">Get Tickets</a>';
+            }
+            
+            // Status badge
+            let statusBadge = '';
+            if (isToday && !isPast) {
+                statusBadge = '<span class="event-status-badge today">Today!</span>';
+            } else if (event.soldOut) {
+                statusBadge = '<span class="event-status-badge sold-out">Sold Out</span>';
+            }
+            
+            return `
+                <article class="event-full-card">
+                    ${isPast ? '<span class="past-badge">Past Event</span>' : ''}
+                    <div class="event-image">
+                        <img src="${imageSrc}" alt="${event.title}" loading="lazy">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date-badge">
+                            <span class="day">${day}</span>
+                            <span class="month">${month}</span>
+                            <span class="year">${year}</span>
+                        </div>
+                        <h2>${event.title}${statusBadge}</h2>
+                        <p class="event-description">${event.description}</p>
+                        <div class="event-details-grid">
+                            <div class="detail">
+                                <span class="label">Time</span>
+                                <span class="value">${event.time}</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Location</span>
+                                <span class="value">${event.location}</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Price</span>
+                                <span class="value">${event.price}</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Spots</span>
+                                <span class="value">${event.spots}</span>
+                            </div>
+                        </div>
+                        ${buttonHtml}
+                    </div>
+                </article>
+            `;
+        }
+        
+        // Load events on page load
+        document.addEventListener('DOMContentLoaded', loadEvents);
+    </script>
+</body>
+</html>
