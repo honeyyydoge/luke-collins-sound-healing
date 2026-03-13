@@ -91,13 +91,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form-container">
                     <h3>Send a Message</h3>
-                    <!-- 
-                    TO ACTIVATE: 
-                    1. Go to formspree.io and create free account
-                    2. Create a new form
-                    3. Replace YOUR_FORM_ID below with your form ID
-                    -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <form id="contact-form" class="contact-form" onsubmit="return sendEmail(event)">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -122,6 +116,19 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+                    <script>
+                    function sendEmail(e) {
+                        e.preventDefault();
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const subject = document.getElementById('subject').value;
+                        const message = document.getElementById('message').value;
+                        const body = `Hi Luke,\n\n${message}\n\n—\n${name}\n${email}`;
+                        const mailtoLink = `mailto:luke@soundhealing.sydney?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                        window.location.href = mailtoLink;
+                        return false;
+                    }
+                    </script>
                 </div>
             </div>
         </div>
