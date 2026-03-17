@@ -16,7 +16,7 @@ This is how you show up when people search "sound healing near me" or "sound bat
 4. Click "Add your business"
 5. Enter: **Luke Collins Sound Healing**
 6. Category: Search for "Sound Healing Practitioner" or "Meditation Center"
-7. Add your address: **37 Nicholson Street, Balmain NSW 2041**
+7. Add your address: **[your address]**
 8. Add phone number (if you want calls)
 9. Add website: (your website URL once live)
 10. Verify your business (Google will send a postcard OR call you)
@@ -79,7 +79,7 @@ Create free listings on these sites. Just add your basic info + link to website.
 
 ### What to put on each:
 - Business name: Luke Collins Sound Healing
-- Address: 37 Nicholson Street, Balmain NSW 2041
+- Address: [your address]
 - Phone: [your number]
 - Website: [your URL]
 - Category: Sound Healing / Meditation / Wellness
