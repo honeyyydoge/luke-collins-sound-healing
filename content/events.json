@@ -1,37 +1,50 @@
 {
   "events": [
     {
-      "title": "Lunar New Year Sound Journey",
-      "date": "2026-02-18",
+      "active": true,
+      "price": "$50 single / $80 pair",
       "time": "7:00 PM - 8:00 PM",
+      "date": "2026-02-18",
+      "spots": "Limited to 10 participants",
       "location": "Balmain Studio",
-      "price": "$50 single / $80 pair",
-      "spots": "Limited to 10 participants",
-      "description": "Please join me for a sound journey to mark the Lunar New Year — a 1 hour journey of gongs and bowls from the Himalayas.",
+      "title": "Lunar New Year Sound Journey",
       "image": "assets/lunar-new-year-event.jpg",
-      "active": true
+      "description": "Please join me for a sound journey to mark the Lunar New Year — a 1 hour journey of gongs and bowls from the Himalayas."
     },
     {
-      "title": "Full Moon Sound Bath",
-      "date": "2026-03-14",
-      "time": "7:30 PM - 9:00 PM",
-      "location": "Sydney Studio",
+      "active": true,
       "price": "$50 single / $80 pair",
+      "time": "7:30 PM - 9:00 PM",
+      "date": "2026-03-14",
       "spots": "Limited to 10 participants",
-      "description": "Bathe in the resonance of crystal bowls and gongs under the full moon's energy. Release what no longer serves you and welcome new intentions.",
+      "location": "Sydney Studio",
+      "title": "Full Moon Sound Bath",
       "image": "assets/luke-session-2.jpg",
-      "active": true
+      "description": "Bathe in the resonance of crystal bowls and gongs under the full moon's energy. Release what no longer serves you and welcome new intentions."
     },
     {
-      "title": "Autumn Equinox Ceremony",
-      "date": "2026-03-20",
-      "time": "6:00 PM - 8:00 PM",
-      "location": "Sydney",
+      "active": true,
       "price": "$65 per person",
+      "time": "6:00 PM - 8:00 PM",
+      "date": "2026-03-20",
       "spots": "Limited to 15 participants",
-      "description": "Mark the turning of the seasons with a special outdoor sound ceremony. As day and night find balance, we'll journey through sound to find our own equilibrium.",
+      "location": "Sydney",
+      "title": "Autumn Equinox Ceremony",
       "image": "assets/garden-gong-view.jpg",
-      "active": true
+      "description": "Mark the turning of the seasons with a special outdoor sound ceremony. As day and night find balance, we'll journey through sound to find our own equilibrium."
+    },
+    {
+      "checkoutPrice": 50,
+      "active": true,
+      "price": "$50 single / $80 pair",
+      "time": "7:00 PM - 8:00 PM",
+      "date": "2026-03-31",
+      "spots": "Limited to 10 participants",
+      "location": "Primary Location, Balmain",
+      "title": "New Moon Soundbath",
+      "soldOut": false,
+      "image": "/assets/banner-source.jpg",
+      "description": "Come join us for an evening soundbath"
     }
   ]
 }
