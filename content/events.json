@@ -1,52 +1,6 @@
 {
   "events": [
     {
-      "active": true,
-      "price": "$50 single / $80 pair",
-      "time": "7:00 PM - 8:00 PM",
-      "date": "2026-02-18",
-      "spots": "Limited to 10 participants",
-      "location": "Balmain Studio",
-      "title": "Lunar New Year Sound Journey",
-      "image": "assets/lunar-new-year-event.jpg",
-      "description": "Please join me for a sound journey to mark the Lunar New Year — a 1 hour journey of gongs and bowls from the Himalayas."
-    },
-    {
-      "active": true,
-      "price": "$50 single / $80 pair",
-      "time": "7:30 PM - 9:00 PM",
-      "date": "2026-03-14",
-      "spots": "Limited to 10 participants",
-      "location": "Sydney Studio",
-      "title": "Full Moon Sound Bath",
-      "image": "assets/luke-session-2.jpg",
-      "description": "Bathe in the resonance of crystal bowls and gongs under the full moon's energy. Release what no longer serves you and welcome new intentions."
-    },
-    {
-      "active": true,
-      "price": "$65 per person",
-      "time": "6:00 PM - 8:00 PM",
-      "date": "2026-03-20",
-      "spots": "Limited to 15 participants",
-      "location": "Sydney",
-      "title": "Autumn Equinox Ceremony",
-      "image": "assets/garden-gong-view.jpg",
-      "description": "Mark the turning of the seasons with a special outdoor sound ceremony. As day and night find balance, we'll journey through sound to find our own equilibrium."
-    },
-    {
-      "checkoutPrice": 50,
-      "active": true,
-      "price": "$50 single / $80 pair",
-      "time": "7:00 PM - 8:00 PM",
-      "date": "2026-03-31",
-      "spots": "Limited to 10 participants",
-      "location": "Primary Location, Balmain",
-      "title": "New Moon Soundbath",
-      "soldOut": false,
-      "image": "/assets/banner-source.jpg",
-      "description": "Come join us for an evening soundbath"
-    },
-    {
       "checkoutPrice": 55,
       "active": true,
       "ticketsUrl": "https://www.eventbrite.com.au/e/sound-bath-with-luke-collins-himalayan-sound-healing-tickets-1986314336651?aff=oddtdtcreator#location",
@@ -59,6 +13,19 @@
       "soldOut": false,
       "image": "/assets/whatsapp-image-2026-04-03-at-12.04.17.jpeg",
       "description": "Held in the beautiful space of the Flourmill in Newtown, a journey of sound, energy and presence with ancient instruments from the Himalayas\nThe event is an immersion into the traditional sound healing of the Himalayas. When combined with yoga nidra and breath, as has been known for thousands of years , this work can bring deep calibration of the nervous system and energy. A bit about me , I trained in Nepal on the very instruments I sought and brought back. Many of which are hundreds of years old that form a link back to the old traditions and lineages of the masters who were the custodians before me."
+    },
+    {
+      "active": true,
+      "ticketsUrl": "https://www.eventbrite.com/e/1987259596950?aff=oddtdtcreator",
+      "price": "$54.26",
+      "time": "7:00 PM - 8:30 PM",
+      "date": "2026-05-08",
+      "spots": "Limited to 12 participants",
+      "location": "Unit 106, 3 Gladstone Street, Newtown, NSW 2042",
+      "title": "Sound Bath with Luke Collins - Himalayan Sound Healing",
+      "soldOut": false,
+      "image": "/assets/himalayan-bowls-faded.jpg",
+      "description": "Held in the beautiful space of the Flourmill in Newtown, a journey of sound, energy and presence with ancient instruments from the Himalayas The event is an immersion into the traditional sound healing of the Himalayas. When combined with yoga nidra and breath, as has been known for thousands of years , this work can bring deep calibration of the nervous system and energy. A bit about me , I trained in Nepal on the very instruments I sought and brought back. Many of which are hundreds of years old that form a link back to the old traditions and lineages of the masters who were the custodians before me."
     }
   ]
 }
