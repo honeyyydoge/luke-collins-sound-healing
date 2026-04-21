@@ -75,9 +75,56 @@
                 <p style="color: rgba(255,255,255,0.6); text-align: center;">Loading events...</p>
             </div>
 
+            <div id="past-events-section" style="display:none; margin-top: 4rem;">
+                <h2 class="section-title" style="margin-bottom: 2rem; opacity: 0.7;">Past Events</h2>
+                <div class="tickets-grid" id="past-tickets-container"></div>
+            </div>
+
             <script>
             (async function() {
                 const container = document.getElementById('tickets-container');
+                const pastContainer = document.getElementById('past-tickets-container');
+                const pastSection = document.getElementById('past-events-section');
+
+                function renderCard(event, isPast) {
+                    const d = new Date(event.date + 'T00:00:00');
+                    const day = d.getDate();
+                    const month = d.toLocaleString('en-AU', { month: 'short' });
+                    const year = d.getFullYear();
+                    const btnHtml = isPast
+                        ? '<button class="btn btn-secondary btn-small" disabled>Event Ended</button>'
+                        : event.soldOut
+                            ? '<button class="btn btn-secondary btn-small" disabled>Sold Out</button>'
+                            : `<a href="${event.ticketsUrl}" class="btn btn-primary btn-small" target="_blank" rel="noopener">Get Tickets</a>`;
+                    return `
+                    <div class="ticket-card"${isPast ? ' style="opacity:0.6;"' : ''}>
+                        ${isPast ? '<div class="ticket-badge" style="background:#666;">Past Event</div>' : ''}
+                        <div class="ticket-date">
+                            <span class="day">${day}</span>
+                            <span class="month">${month}</span>
+                            <span class="year">${year}</span>
+                        </div>
+                        <div class="ticket-info">
+                            <h3>${event.title}</h3>
+                            <p>${event.description.split('\n')[0]}</p>
+                            <div class="ticket-meta">
+                                <span>${event.time}</span>
+                                <span>${event.location}</span>
+                            </div>
+                        </div>
+                        <div class="ticket-pricing">
+                            <div class="ticket-option">
+                                <div class="option-details">
+                                    <span class="option-name">Single Ticket</span>
+                                    <span class="option-price">${isPast ? event.price : event.price}</span>
+                                </div>
+                                ${btnHtml}
+                            </div>
+                        </div>
+                        ${event.spots ? `<div class="ticket-spots"><span class="spots-text">${event.spots}</span></div>` : ''}
+                    </div>`;
+                }
+
                 try {
                     const response = await fetch('content/events.json');
                     const data = await response.json();
@@ -86,51 +133,19 @@
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
 
-                    const upcoming = events.filter(e => e.active && new Date(e.date) >= today)
+                    const upcoming = events.filter(e => e.active && new Date(e.date + 'T00:00:00') >= today)
                         .sort((a, b) => new Date(a.date) - new Date(b.date));
+                    const past = events.filter(e => e.active && new Date(e.date + 'T00:00:00') < today)
+                        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                    if (upcoming.length === 0) {
-                        container.innerHTML = '<p style="color: rgba(255,255,255,0.7); text-align: center; padding: 3rem 0; font-size: 1.1rem;">There are currently no events. Check back at a later date for new events.</p>';
-                        return;
+                    container.innerHTML = upcoming.length === 0
+                        ? '<p style="color: rgba(255,255,255,0.7); text-align: center; padding: 3rem 0; font-size: 1.1rem;">There are currently no events. Check back at a later date for new events.</p>'
+                        : upcoming.map(e => renderCard(e, false)).join('');
+
+                    if (past.length > 0) {
+                        pastContainer.innerHTML = past.map(e => renderCard(e, true)).join('');
+                        pastSection.style.display = 'block';
                     }
-
-                    container.innerHTML = upcoming.map(event => {
-                        const d = new Date(event.date + 'T00:00:00');
-                        const day = d.getDate();
-                        const month = d.toLocaleString('en-AU', { month: 'short' });
-                        const year = d.getFullYear();
-                        const btnHtml = event.soldOut
-                            ? '<button class="btn btn-secondary btn-small" disabled>Sold Out</button>'
-                            : `<a href="${event.ticketsUrl}" class="btn btn-primary btn-small" target="_blank" rel="noopener">Get Tickets</a>`;
-                        return `
-                        <div class="ticket-card">
-                            <div class="ticket-date">
-                                <span class="day">${day}</span>
-                                <span class="month">${month}</span>
-                                <span class="year">${year}</span>
-                            </div>
-                            <div class="ticket-info">
-                                <h3>${event.title}</h3>
-                                <p>${event.description.split('\n')[0]}</p>
-                                <div class="ticket-meta">
-                                    <span>${event.time}</span>
-                                    <span>${event.location}</span>
-                                </div>
-                            </div>
-                            <div class="ticket-pricing">
-                                <div class="ticket-option">
-                                    <div class="option-details">
-                                        <span class="option-name">Single Ticket</span>
-                                        <span class="option-price">${event.price}</span>
-                                    </div>
-                                    ${btnHtml}
-                                </div>
-                            </div>
-                            <div class="ticket-spots">
-                                <span class="spots-text">${event.spots}</span>
-                            </div>
-                        </div>`;
-                    }).join('');
                 } catch (e) {
                     container.innerHTML = '<p style="color: rgba(255,255,255,0.6); text-align: center; padding: 3rem 0;">There are currently no events. Check back at a later date for new events.</p>';
                 }
