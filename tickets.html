@@ -71,98 +71,71 @@
             =====================================================
             -->
 
-            <div class="tickets-grid">
-                
-                <!-- Ticket 1: Full Moon (Mar 14) -->
-                <div class="ticket-card">
-                    <div class="ticket-badge coming-soon-badge">Coming Soon</div>
-                    <div class="ticket-date">
-                        <span class="day">14</span>
-                        <span class="month">Mar</span>
-                        <span class="year">2026</span>
-                    </div>
-                    <div class="ticket-info">
-                        <h3>Full Moon Sound Bath</h3>
-                        <p>Bathe in the resonance of crystal bowls and gongs under the full moon's energy.</p>
-                        <div class="ticket-meta">
-                            <span>7:30 PM</span>
-                            <span>Sydney</span>
-                        </div>
-                    </div>
-                    <div class="ticket-pricing">
-                        <div class="ticket-option">
-                            <div class="option-details">
-                                <span class="option-name">Single Ticket</span>
-                                <span class="option-price">$50</span>
-                            </div>
-                            <button class="btn btn-secondary btn-small" disabled>Notify Me</button>
-                        </div>
-                    </div>
-                    <div class="ticket-spots">
-                        <span class="spots-icon">⏳</span>
-                        <span class="spots-text">Tickets open soon</span>
-                    </div>
-                </div>
-
-                <!-- Ticket 2: Equinox (Mar 20) -->
-                <div class="ticket-card">
-                    <div class="ticket-badge coming-soon-badge">Coming Soon</div>
-                    <div class="ticket-date">
-                        <span class="day">20</span>
-                        <span class="month">Mar</span>
-                        <span class="year">2026</span>
-                    </div>
-                    <div class="ticket-info">
-                        <h3>Autumn Equinox Ceremony</h3>
-                        <p>Mark the turning of the seasons with a special equinox sound ceremony.</p>
-                        <div class="ticket-meta">
-                            <span>6:30 PM</span>
-                            <span>Sydney</span>
-                        </div>
-                    </div>
-                    <div class="ticket-pricing">
-                        <div class="ticket-option">
-                            <div class="option-details">
-                                <span class="option-name">Single Ticket</span>
-                                <span class="option-price">$60</span>
-                            </div>
-                            <button class="btn btn-secondary btn-small" disabled>Notify Me</button>
-                        </div>
-                    </div>
-                    <div class="ticket-spots">
-                        <span class="spots-icon">⏳</span>
-                        <span class="spots-text">Tickets open soon</span>
-                    </div>
-                </div>
-
+            <div class="tickets-grid" id="tickets-container">
+                <p style="color: rgba(255,255,255,0.6); text-align: center;">Loading events...</p>
             </div>
 
-            <!-- Past Events -->
-            <h2 class="section-title" style="margin-top: 4rem; margin-bottom: 2rem; opacity: 0.7;">Past Events</h2>
-            <div class="tickets-grid">
-                
-                <!-- Past Event: Lunar New Year -->
-                <div class="ticket-card" style="opacity: 0.6;">
-                    <div class="ticket-badge" style="background: #666;">Past Event</div>
-                    <div class="ticket-date">
-                        <span class="day">18</span>
-                        <span class="month">Feb</span>
-                        <span class="year">2026</span>
-                    </div>
-                    <div class="ticket-info">
-                        <h3>Lunar New Year Sound Journey</h3>
-                        <p>A 1 hour journey of gongs and bowls from the Himalayas to mark the Lunar New Year.</p>
-                        <div class="ticket-meta">
-                            <span>7:00 PM</span>
-                            <span>Sydney Studio</span>
-                        </div>
-                    </div>
-                    <div class="ticket-spots">
-                        <span class="spots-text" style="color: #888;">This event has ended</span>
-                    </div>
-                </div>
+            <script>
+            (async function() {
+                const container = document.getElementById('tickets-container');
+                try {
+                    const response = await fetch('content/events.json');
+                    const data = await response.json();
+                    const events = data.events || data;
 
-            </div>
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    const upcoming = events.filter(e => e.active && new Date(e.date) >= today)
+                        .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                    if (upcoming.length === 0) {
+                        container.innerHTML = '<p style="color: rgba(255,255,255,0.7); text-align: center; padding: 3rem 0; font-size: 1.1rem;">There are currently no events. Check back at a later date for new events.</p>';
+                        return;
+                    }
+
+                    container.innerHTML = upcoming.map(event => {
+                        const d = new Date(event.date + 'T00:00:00');
+                        const day = d.getDate();
+                        const month = d.toLocaleString('en-AU', { month: 'short' });
+                        const year = d.getFullYear();
+                        const btnHtml = event.soldOut
+                            ? '<button class="btn btn-secondary btn-small" disabled>Sold Out</button>'
+                            : `<a href="${event.ticketsUrl}" class="btn btn-primary btn-small" target="_blank" rel="noopener">Get Tickets</a>`;
+                        return `
+                        <div class="ticket-card">
+                            <div class="ticket-date">
+                                <span class="day">${day}</span>
+                                <span class="month">${month}</span>
+                                <span class="year">${year}</span>
+                            </div>
+                            <div class="ticket-info">
+                                <h3>${event.title}</h3>
+                                <p>${event.description.split('\n')[0]}</p>
+                                <div class="ticket-meta">
+                                    <span>${event.time}</span>
+                                    <span>${event.location}</span>
+                                </div>
+                            </div>
+                            <div class="ticket-pricing">
+                                <div class="ticket-option">
+                                    <div class="option-details">
+                                        <span class="option-name">Single Ticket</span>
+                                        <span class="option-price">${event.price}</span>
+                                    </div>
+                                    ${btnHtml}
+                                </div>
+                            </div>
+                            <div class="ticket-spots">
+                                <span class="spots-text">${event.spots}</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                } catch (e) {
+                    container.innerHTML = '<p style="color: rgba(255,255,255,0.6); text-align: center; padding: 3rem 0;">There are currently no events. Check back at a later date for new events.</p>';
+                }
+            })();
+            </script>
 
             <!-- Private Sessions CTA -->
             <div class="private-booking">
